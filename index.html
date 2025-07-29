@@ -1,56 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fitness Club Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <style>
     html, body {
-      background: url('img/image.jpg');
-      height: 100%;
-      background-size: cover;
-      background-repeat: no-repeat;
       margin: 0;
       padding: 0;
+      height: 100%;
+      background: url('/img/image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Anton', sans-serif;
     }
 
     .navbar {
-      width: auto;
-      background-color: transparent;
       display: flex;
-      justify-content: left;
-      margin-bottom: 300px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background-color: rgba(0, 0, 0, 0.5); /* optional for better readability */
     }
 
-    #brandname {
-      border: none;
-      background-color: transparent;
+    #brandname h2 {
+      margin: 0;
     }
 
     #brandname a {
       text-decoration: none;
       color: white;
-      font-weight: bold;
-      font-size: larger;
-      margin-left: 30px;
+      font-size: 28px;
     }
 
     #list {
-      color: white;
-      display: flex;
-      float: left;
       list-style: none;
-      flex-direction: row;
-      margin-top: 21px;
-      margin-left: 40px;
+      display: flex;
+      padding: 0;
+      margin: 0;
+      gap: 30px;
     }
 
     #list a {
       text-decoration: none;
-      margin-top: 30px;
-      margin-right: 50px;
       color: white;
+      font-size: 18px;
     }
 
     #list a:hover {
@@ -58,92 +52,66 @@
     }
 
     .quote {
-      margin-left: 40px;
-      font-family: 'Anton', sans-serif;
-      font-weight: bolder;
+      margin: 80px 30px 20px;
       color: white;
       font-size: 50px;
-      text-align: center;
-      margin-right: 400px;
+      max-width: 90%;
+      line-height: 1.2;
     }
 
     .button {
-      display: inline-block;
-      background-color: red;
-      color: white;
-      padding: 20px 60px;
-      text-decoration: none;
-      font-weight: bold;
-      border: 2px solid black;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-      margin-left: 470px;
-      margin-top: 40px;
+      margin: 30px;
     }
 
     .button a {
-      color: rgb(247, 242, 242);
+      display: inline-block;
       background-color: red;
-      padding: 4px 0px;
+      color: white;
+      padding: 15px 40px;
       text-decoration: none;
-      align-items: center;
-      font-size: large;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s;
     }
 
     .button a:hover {
-      color: royalblue;
+      background-color: darkred;
+      color: white;
     }
 
-    /* 🔽 Responsive Styles for Mobile */
+    /* ✅ Responsive */
     @media screen and (max-width: 768px) {
       .navbar {
         flex-direction: column;
         align-items: flex-start;
-        margin-bottom: 100px;
-      }
-
-      #brandname {
-        margin-left: 20px;
-        margin-top: 10px;
+        padding: 20px;
       }
 
       #list {
         flex-direction: column;
-        margin-left: 20px;
-        margin-top: 10px;
-      }
-
-      #list a {
-        margin: 10px 0;
+        gap: 15px;
+        margin-top: 15px;
       }
 
       .quote {
-        font-size: 28px;
-        margin-left: 20px;
-        margin-right: 20px;
-        text-align: left;
-      }
-
-      .button {
-        margin-left: 20px;
-        margin-right: 20px;
-        padding: 15px 30px;
+        font-size: 30px;
+        margin: 50px 20px 20px;
       }
 
       .button a {
         font-size: 16px;
+        padding: 12px 24px;
       }
     }
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <button id="brandname">
-      <h2>
-        <a href="#">Fitness Club</a>
-      </h2>
-    </button>
 
+  <header class="navbar">
+    <div id="brandname">
+      <h2><a href="#">Fitness Club</a></h2>
+    </div>
     <ul id="list">
       <li><a href="#">Classes</a></li>
       <li><a href="#">Personal Workouts</a></li>
@@ -159,5 +127,6 @@
   <div class="button">
     <a href="home.html">Get Started</a>
   </div>
+
 </body>
 </html>
